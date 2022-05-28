@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="javascript.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg bg-dark bg-opacity-75 text-white">
+            <div class="container-fluid text-white  ">
+
+                <a class="navbar-brand text-white" href="">Conf Bs As</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuLat"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse " id="menuLat">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item ">
+                            <a class="nav-link  text-white-50" aria-current="page" href="#">La conferencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="#">Los oradores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="#">El lugar y la fecha</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" href="#">Conviértete en orador</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link active text-success" href="#">Comprar tickets</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        <section class="container mt-4 ">
+            <div class="row">
+                <div class="col-md-4  col-sm-12 mb-sm-2">
+                    <div class="contenidoOf p-2  border border-2 border-primary d-flex flex-column align-items-center">
+                        <h2>Estudiante</h2>
+                        <h3>Tienen un descuento</h3>
+                        <h3>80%</h3>
+                        <p class="text-black-50">*presentar Documentacion</p>
+                    </div>
+                </div>
+                <div class="col-md-4  col-sm-12 mb-sm-2">
+                    <div class="contenidoOf p-2 border border-2 border-primary d-flex flex-column align-items-center">
+                        <h2 class="titulo">Trainee</h2>
+                        <h3>Tienen un descuento</h3>
+                        <h3>50%</h3>
+                        <p class="text-black-50">*presentar Documentacion</p>
+                    </div>
+                </div>
+                <div class="col-md-4  col-sm-12 mb-sm-2">
+                    <div class="contenidoOf p-2  border border-2 border-primary d-flex flex-column align-items-center">
+                        <h2 class="titulo">Junior</h2>
+                        <h3>Tienen un descuento</h3>
+                        <h3>15%</h3>
+                        <p class="text-black-50">*presentar Documentacion</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="titulo-sub d-flex align-items-center flex-column mt-2">
+                <h6>VENTA</h6>
+                <h1>VALOR DE TICKET $200</h1>
+            </div>
+            <form action="" class="mt-2">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+                    </div>
+                    <div class="col-12 mt-3">
+                        <input type="email" class="form-control" id="correo" placeholder="Correo">
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6">
+                            <legend>Cantidad</legend>
+                            <input type="number" class="form-control" id="cantidad" placeholder="Cantidad">
+                        </div>
+                        <div class="col-6">
+                            <legend>Categoria</legend>
+                            <select id="select" class="form-select">
+                                <option value="Estudiante">Estudiante</option>
+                                <option value="Trainee">Trainee</option>
+                                <option value="Junior">Junior</option>
+                            </select>
+                        </div>
+                        <div class="col-12 mt-5">
+                            <div id="totalPagar" class="total bg-info border bg-opacity-10 rounded p-2 ">
+                                Total a Pagar:$
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-6">
+                                <button onclick=borrarContenidoInputs() type="button"
+                                    class="btn btn-success w-100">Borrar</button>
+                            </div>
+                            <div class="col-6">
+                                <button onclick="calcularTotal()" type="button"
+                                    class="btn btn-success w-100">Resumen</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!-- position-fixed bottom-0 end-0 start-0 -->
+        <footer style=" height: 178px;" class="mt-4 bg-dark h-4 ">
+            <ul class="h-100 d-flex text-white list-unstyled  justify-content-around align-items-center">
+                <li>Preguntas Frecuentes</li>
+                <li>Contactanos</li>
+                <li>Prensa</li>
+                <li>Conferencia</li>
+                <li>Terminos y Condiciones</li>
+                <li>Privacidad</li>
+                <li>Estudiantes</li>
+            </ul>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
